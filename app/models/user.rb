@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  #has_one :library
+  has_one :library, dependent: :destroy
   
   attr_accessor :remember_token
   before_save { email.downcase! }
